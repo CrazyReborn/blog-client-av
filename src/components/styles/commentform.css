@@ -1,0 +1,17 @@
+.commentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentForm > label {
+    font-size: 1.5rem;
+    margin-top: 1%;
+}
+
+.commentForm > input {
+    margin-top: 1%;
+}
+
+.commentForm > button[type='submit'] {
+    width: min-content;
+}

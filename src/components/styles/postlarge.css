@@ -1,0 +1,26 @@
+.main {
+    margin: 2% 15% 2%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 1%;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+article {
+    margin-top: 2%;
+    text-align: justify;
+}
+
+p {
+    font-size: 1.5rem;
+}
