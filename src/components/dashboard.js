@@ -11,12 +11,12 @@ function Dashboard() {
       fetch('http://localhost:5000/api/', {headers: {'authorization': `Bearer ${token}`}})
       .then(response => response.json())
       .then(json => {
-          setPosts(json.posts); 
-          console.log(json.posts)})
+          setPosts(json.posts)
+      })
       .catch(err => {
         console.log('There was an error fetching posts data: ', err);
       })
-    }, [])
+    }, [posts])
 
     return (
         <div className='dashboard'>
