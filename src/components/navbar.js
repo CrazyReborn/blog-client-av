@@ -10,7 +10,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setToken(localStorage.getItem('authToken'));
-    }, [location])
+    }, [location]);
 
     return (
         <nav className='navbar'>
