@@ -5,6 +5,8 @@ import './styles/dashboard.css';
 function Dashboard() {
 
     const [posts, setPosts] = useState([]);
+    const [token, setToken] = useState('');
+
     useEffect(() => {
       fetch('http://localhost:5000/api/')
       .then(response => response.json())
