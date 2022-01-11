@@ -7,7 +7,7 @@ function Logout () {
     const [error, setError] = useState('');
     
     useEffect(()=> {
-        fetch('http://localhost:5000/api/logout')
+        fetch('http://localhost:5000/api/logout', { method: 'POST'})
         .then(response => {
             localStorage.removeItem('authToken');
             navigate('/')
