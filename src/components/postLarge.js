@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Comment from "./comment";
 import CommentForm from './commentForm';
 import PostForm from "./postform";
@@ -44,7 +44,9 @@ function PostLarge() {
                         <h1>{post.title}</h1>
                         <h2>By {post.author.username}</h2>
                         <h3>{format(parseISO(post.date), 'do MMMM u, H:m')}</h3>
-                        {parse(`<article>${post.text}</article>`)}
+                        <article>{
+                        parse(`${post.text}`)
+                        }</article>
                         <button onClick={(e) => setUpdatingPost(!updatingPost)}>Update this post</button>
                     </div>
                     <CommentForm />

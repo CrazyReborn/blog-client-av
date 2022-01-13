@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Editor } from '@tinymce/tinymce-react';
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 function PostForm (props) {
     const post = props.post;
