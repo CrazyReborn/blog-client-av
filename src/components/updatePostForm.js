@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Editor } from '@tinymce/tinymce-react';
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
 
-function PostForm (props) {
+function UpdatePostForm (props) {
+    
     const post = props.post;
     const apikey = props.apikey;
     const setUpdating = props.setUpdating;
@@ -59,4 +59,4 @@ function PostForm (props) {
     )
 }
 
-export default PostForm
+export default UpdatePostForm

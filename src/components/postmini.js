@@ -39,6 +39,20 @@ function PostMini(props) {
         })
     }
 
+    const DeletePost = (e) => {
+        e.preventDefault();
+
+        fetch(`http://localhost:5000/api/posts/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'authorization' : `Bearer ${token}`,
+                'Content-Type' : 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err))
+    }
+
     return (
         <div className='post'>
             <h3>{post.title} by {post.author.username}</h3>
@@ -46,6 +60,9 @@ function PostMini(props) {
             <p>Status:{post.published ? 'published' : 'not published'}</p>
             <form onSubmit={(e) => ChangePublishStatus(e)}>
                 <button type='submit'>{published ? 'Unpublish' : 'Publish'}</button>
+            </form>
+            <form onSubmit={(e) => DeletePost(e)}>
+                <button type='submit'>Delete this post</button>
             </form>
             {errors !== null &&
             <p>{errors}</p>}

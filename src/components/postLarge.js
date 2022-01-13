@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import Comment from "./comment";
 import CommentForm from './commentForm';
-import PostForm from "./postform";
 import { format } from 'date-fns';
 import parseISO from 'date-fns/parseISO'
 import './styles/postlarge.css';
 import parse from 'html-react-parser';
+import UpdatePostForm from "./updatePostForm";
 
 function PostLarge() {
     const [post, setPost] = useState();
@@ -67,7 +67,7 @@ function PostLarge() {
     //render the form
     else {
         return (
-            <PostForm updating={updatingPost} setUpdating={setUpdatingPost} post={post} apikey={tinymceKey}/>
+            <UpdatePostForm updating={updatingPost} setUpdating={setUpdatingPost} post={post} apikey={tinymceKey}/>
         )
     }
 }
