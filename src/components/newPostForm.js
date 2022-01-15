@@ -46,7 +46,6 @@ function NewPostForm(props) {
                 }} onEditorChange={(value, e) => setText(value)} />
                 <button type='submit'>Submit</button>
             </form>
-            
         </div>
     )
 }
